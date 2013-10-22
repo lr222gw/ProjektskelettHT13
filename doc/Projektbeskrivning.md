@@ -31,4 +31,5 @@ Inga förstudier.
 
 ## Tidsplanering
 *Länka till tidsplaneringen här, eller fäll in som en bild.*
+https://github.com/lr222gw/ProjektskelettHT13/blob/gh-pages/doc/Ganntschema.pdf
 
