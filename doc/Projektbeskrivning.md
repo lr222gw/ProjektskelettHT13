@@ -19,7 +19,7 @@ Jag ska ladda in ett externt typsnitt som används för att spegla John, typsnit
 
 ## Tekniker
 *Vilka tekniker kommer att användas? Kommer ni att använda några ramverk? CSS-preprocessors?*
-Websidan skapas med Cloud9, github, HTML5boilerplate. Html5, Css3.
+Websidan skapas med Cloud9, github, HTML5boilerplate. Html5, Css3, sass.
 
 ## Begränsningar
 *Eventuella begränsningar i projektet. Kanske kommer viss funktionalitet att fejkas eftersom ni inte besitter kunskaper att skapa detta ännu?*
@@ -27,11 +27,11 @@ Projektet är inte så avancerat att det behöver begränsningar.
 
 ## Förstudier
 *Eventuellt redan existerande prototyper, användarundersökningar etc. Kanske gör ni om en befintlig webbplats? Beskriv då det här.*
-Inga förstudier.
+Inga förstudier. lite om sass..
 
 ## Tidsplanering
 *Länka till tidsplaneringen här, eller fäll in som en bild.*
 [Tisdplanering](Ganntschema.pdf) *<-- länk*
 
-sass? Ramverk?
+
 
