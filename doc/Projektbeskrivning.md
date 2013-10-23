@@ -1,11 +1,11 @@
 
-# Projektnamn här
+# Sidan om Johan
 Projektmedlemmar: 
 [lr222gw](https://github.com/lr222gw)
 
 *Lista alla medlemmar ovan. Ni behöver inte ange fullständiga namn utan länk till GitHub-konto räcker.*
 
-[Körbar version av projektet](https://github.com/lr222gw/ProjektskelettHT13)
+[Körbar version av projektet](https://c9.io/lr222gw/projektskelettht13/workspace/index.html)
 
 *Länka till en körbar version av projektet ovan. Exempelvis kan ni skapa en gh-pages-branch på samma sätt som i Uppgift 1.1, laboration 1.*
 
@@ -31,5 +31,7 @@ Inga förstudier.
 
 ## Tidsplanering
 *Länka till tidsplaneringen här, eller fäll in som en bild.*
-https://github.com/lr222gw/ProjektskelettHT13/blob/gh-pages/doc/Ganntschema.pdf
+[Tisdplanering](Ganntschema.pdf) *<-- länk*
+
+sass? Ramverk?
 
