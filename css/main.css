@@ -74,18 +74,18 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 5px solid #e44d26;
+    border-bottom: 5px solid #000000;
 }
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #e44d26;
+    border-top: 20px solid #260101;
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #f16529;
+    background: #730202;
 }
 
 .title {
@@ -111,7 +111,8 @@ nav a {
     font-weight: bold;
 
     color: white;
-    background: #e44d26;
+    background: #A60303;
+    transition: 0.2s ease-in-out; /*animerar lite fint*/
 }
 
 nav a:hover,
@@ -121,9 +122,30 @@ nav a:visited {
 
 nav a:hover {
     text-decoration: underline; 
+        background: #D90416;
 }
-
-
+/*BAKGRUNDEN*/
+    .main-container {
+    background-image: url(../images/bakgrund.jpg);
+    background-image: url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat-y;
+    background-size: 194%, 194%;
+    }
+/*Ariklar!*/
+article {
+background-color: rgba(90, 0, 0, 0.38);
+padding: 5px;
+background-image: url(oldpaper.png);
+background-repeat: repeat-y;
+background-size: 100%;
+border-radius: 5px;
+box-shadow: inset 0px 0px 20px 2px black; /*Ger en trevlig skugga på sindian av ramen..*/
+color: rgb(255, 255, 255); /*Ändrar färgen på bokstäverna..*/
+margin-top: 65px;
+position: relative; /*Denna och Top: -75px gör så att artiklarna börjar strax under navigationen.*/
+top: -75px;
+}
 
 /* ==============
     MOBILE: Main
@@ -160,13 +182,57 @@ nav a:hover {
    ========================================================================== */
 
 /*LOWE LÄGGER IN NY MENY SAK */
- 
+nav { 
+z-index: 5; /*gör att undermenyerna inte hamnar under artiklarna*/
+position: relative;
+} 
 nav li #submenu1, nav li ul li #submenu2 { /*gör så att undermenyerna gömmer sig när de inte ska synas..*/
-    display: none;  /*Submeny 1 och 2 får vara idn då det bara finns 2 submenyer som gör olika saker..*/
+    display: block;  /*Submeny 1 och 2 får vara idn då det bara finns 2 submenyer som gör olika saker..*/
+    /*jag låter display vara block här för då kan det bli en snygg transition*/
+    transition: height 1s ease-in-out;
+    height: 0;
+    overflow: hidden;
 } 
 nav li:hover #submenu1, nav li #submenu1 li:hover #submenu2 { /*Gör så att undermenyn visas när man hovrar över li-taggarna..*/
     display: block;
+    height: 148px;
+    transition: height 1s ease-in-out;
 } 
+nav li:hover #fprint { /*ändrar hur fingreprinten är roterad.*/
+-webkit-transform: r;
+-webkit-transform: rotate(3deg);
+}
+nav ul li a {
+box-shadow: inset 0px 14px 138px -27px rgba(0, 0, 0, 0.81); /*Denna gör navigation lite mörkare, den under gör sp att de ärvande menyerna inte påverkas..*/
+}
+nav ul li ul li a {
+box-shadow: inset 0 0px 0px 0px black; 
+}
+#fprint {
+background-image: url(fprint.png);
+background-position: 50% -2px;
+background-repeat: no-repeat;
+-webkit-transform: rotate(27deg);
+height: 31px;
+position: relative;
+z-index: 40;
+transition: 0.5s ease-in-out;
+}
+
+#submenu2 {
+position: absolute;
+margin: 0 40px 10px 0px;
+background-color: #260101;
+margin-top: -1px;
+border-right: 2px black solid;
+/*border-bottom: 2px black solid;*/
+transition: 0.2s ease-in-out; /*animerar lite fint*/
+}
+#submenu2 li {
+width: 100px;
+box-shadow: 4px 9px 15px 7px rgba(27, 0, 0, 0.61);
+transition: 0.2s ease-in-out; /*animerar lite fint*/
+}
 /*Detta här över är min meny+submeny, testad på mobil och fungerar, vart tvungen att använda IDn för att 
 nav li ul li <-- påverkar alla i nav li ul li ul li: vilket som gör att submenyn till tankar syntes utan att 
 hålla muspekaren över den...*/
@@ -178,13 +244,6 @@ hålla muspekaren över den...*/
 .meny-wrapper h1 { /*h1-taggar i denna ska vara centrerade..*/
     text-align: center;
 }
-
-
-
-
-
-
-
 
 
 
@@ -226,6 +285,7 @@ hålla muspekaren över den...*/
     .oldie nav a {
         margin: 0 0.7%;
     }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -267,7 +327,18 @@ hålla muspekaren över den...*/
         float: right;
         width: 28%;
     }
+    
+.main-container {
+background-image: url(../images/bakgrund.jpg);
+background-image: url(../images/bakgrund.jpg), url(../images/bakgrund1.jpg);
+background-position-x: 50%, 50%;
+background-repeat: no-repeat, repeat-y;
+background-size: 194%, 194%;
 }
+
+    
+}
+
 
 @media only screen and (min-width: 1140px) {
 
@@ -278,6 +349,17 @@ hålla muspekaren över den...*/
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
+    }
+    /*LOWE LÄGGER IN*/
+    .main-container {
+    background-image: url(../images/bakgrund.jpg);
+    background-image: url(../images/bakgrund.jpg), url(../images/bakgrund1.jpg);
+    background-position-x: 50%, 50%;
+    background-repeat: no-repeat, repeat-y;
+    background-size: 2240px, 2240px;
+    }
+    article{
+        padding-left: 20px;
     }
 }
 
