@@ -135,7 +135,7 @@ nav a:hover {
     background-size: 194%, 194%;
     }
 /*Ariklar!*/
-article {
+article, form {
 background-color: rgba(90, 0, 0, 0.38);
 padding: 5px;
 background-image: url(oldpaper.png);
@@ -256,6 +256,16 @@ transition: 0.2s ease-in-out; /*animerar lite fint*/
 /*Detta här över är min meny+submeny, testad på mobil och fungerar, vart tvungen att använda IDn för att 
 nav li ul li <-- påverkar alla i nav li ul li ul li: vilket som gör att submenyn till tankar syntes utan att 
 hålla muspekaren över den...*/
+#where {
+background-color: rgba(0, 0, 0, 0.57);
+height: 32px;
+width: 100px;
+margin-top: -30px;
+margin-left: 5px;
+border-radius: 3px;
+margin-bottom: 2px;
+text-decoration: underline;
+}
 
 .meny-wrapper{
     margin: 0 10%; /*Centrerar titeln på sidan och ger margin så att 5% kapas på båda sidorna*/
