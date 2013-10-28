@@ -74,7 +74,7 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 5px solid #000000;
+   /*border-bottom: 5px solid #000000; */
 }
 
 .footer-container,
@@ -89,6 +89,10 @@ body {
     position: relative;
     z-index: 5;
 }
+.header-container{
+    background: rgb(0, 0, 0);
+}
+
 
 .title {
     color: white;
@@ -163,6 +167,11 @@ opacity: 0.1;
 }
 #logga {
 width: 100%;
+max-width: 700px;
+box-shadow: 0 -10px 23px 17px rgb(48, 134, 110);
+border-left: 1px solid rgb(0, 0, 0);
+border-right: 1px solid rgb(0, 0, 0);
+max-height: 300px;
 }
 .title {
 display: none;
@@ -206,6 +215,7 @@ display: none;
 nav { 
 z-index: 30; /*gör att undermenyerna inte hamnar under artiklarna*/
 position: relative;
+border-top: 5px solid #000000;
 } 
 nav li #submenu1, nav li ul li #submenu2 { /*gör så att undermenyerna gömmer sig när de inte ska synas..*/
     display: block;  /*Submeny 1 och 2 får vara idn då det bara finns 2 submenyer som gör olika saker..*/
@@ -399,6 +409,11 @@ background-size: 194%, 194%;
     }
     .bild1{
         background-size: 1000px; /*Gör att bilden stannar vid 1000px när skärmen är över 1140px..*/
+    }
+    .meny-wrapper {
+    margin: 0 auto;
+    padding: 0px 0px;
+    width: 654px;
     }
 }
 
