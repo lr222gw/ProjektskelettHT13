@@ -135,7 +135,7 @@ nav a:hover {
     background-size: 194%, 194%;
     }
 /*Ariklar!*/
-article, form {
+article, form, main {
 background-color: rgba(90, 0, 0, 0.38);
 padding: 5px;
 background-image: url(oldpaper.png);
@@ -160,6 +160,12 @@ height: 100%;
 margin: 0 0%;
 z-index: 1;
 opacity: 0.1;
+}
+#logga {
+width: 100%;
+}
+.title {
+display: none;
 }
 
 /* ==============
@@ -269,7 +275,7 @@ text-decoration: underline;
 
 .meny-wrapper{
     margin: 0 10%; /*Centrerar titeln på sidan och ger margin så att 5% kapas på båda sidorna*/
-    padding: 40px 0px; /*Gör den lite högre så att man kan ha en bild där sen*/ 
+    padding: 0px 0px; /*Gör den lite högre så att man kan ha en bild där sen*/ 
 }
 .meny-wrapper h1 { /*h1-taggar i denna ska vara centrerade..*/
     text-align: center;
