@@ -1,3 +1,10 @@
+/*Lägger in externa typsnitt*/
+@font-face{
+     font-family: momtw;
+     src: url(fonts/Momtw.ttf);
+}
+
+
 /* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
    ========================================================================== */
@@ -176,6 +183,39 @@ max-height: 300px;
 .title {
 display: none;
 }
+/*Bildgalleri CSS-inställningar*/
+.images a img {
+max-width: 470px;
+max-height: 350px;
+width: 100%; /*Gör bilderna responsiva men de kan inte bli bredare än 470 */
+}
+.images a {
+display: block;
+float: left;
+padding: 10px 10px 20px 10px;
+background-color: rgb(248, 248, 248);
+box-shadow: 1px 1px 8px 1px black;
+margin: 5px 5px 5px 0;
+width: 77%;
+max-width: 400px;
+-webkit-transition: 0.3s ease-in-out;
+}
+.images a:hover{
+    zoom: 1.2;
+    -webkit-transition: 0.3s ease-in-out;
+}
+.images a:after {
+content: attr(title);
+font-size: 30px;
+display: block;
+font-family: momtw;
+padding-top: 15px;
+color: black;
+text-align: center;
+}
+.images a:link { /*tar bort textdecorationer, understreck..*/
+text-decoration: none;
+}
 
 /* ==============
     MOBILE: Main
@@ -317,6 +357,7 @@ text-decoration: underline;
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
+   /*
     nav a {
         float: left;
         width: 27%;
@@ -332,8 +373,8 @@ text-decoration: underline;
     nav li:last-child a {
         margin-right: 0;
     }
-
-      
+ */
+   /*^Kommenterar bort denna kod då vi vill att Paddor ska ha samma layout som mobil...*/   
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -414,7 +455,7 @@ background-size: 194%, 194%;
     /*LOWE LÄGGER IN*/
     .main-container {
     background-image: url(../images/bakgrund.jpg);
-    background-image: url(../images/bakgrund.jpg), url(../images/bakgrund1.jpg);
+    background-image: url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
     background-position-x: 50%, 50%;
     background-repeat: no-repeat, repeat-y;
     background-size: 2240px, 2240px;
