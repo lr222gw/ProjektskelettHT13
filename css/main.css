@@ -121,12 +121,12 @@ nav a {
     transition: 0.2s ease-in-out; /*animerar lite fint*/
 }
 
-nav a:hover,
+nav a:hover, nav a:focus,
 nav a:visited {
     color: white;
 }
 
-nav a:hover {
+nav a:hover, nav a:focus {
     text-decoration: underline; 
         background: #D90416;
 }
@@ -220,22 +220,29 @@ border-top: 5px solid #000000;
 nav li #submenu1, nav li ul li #submenu2 { /*gör så att undermenyerna gömmer sig när de inte ska synas..*/
     display: block;  /*Submeny 1 och 2 får vara idn då det bara finns 2 submenyer som gör olika saker..*/
     /*jag låter display vara block här för då kan det bli en snygg transition*/
-    transition: height 1s ease-in-out;
+    transition: height 0.5s ease-in-out;
     height: 0;
     overflow: hidden;
 } 
-nav li:hover #submenu1 { /*Gör så att undermenyn visas när man hovrar över li-taggarna..*/
-    display: block;
+nav li:hover #submenu1, nav a:focus +  #submenu1, #submenu1.hovered { /*Gör så att undermenyn visas när man hovrar över li-taggarna..*/
+    display: block; /*"nav a:focus + #submenu1" betyder att när man hovrar över a så ska #submenu1 få egenskaperna
+                    Mellan måsvingarna. Detta måste man göra för att #submenu1 inte är ett barn till a utan "en granne".
+                    Man använder "*"-teckenet för att nå grannen. Detta fungerar bara om det inte finns några andra
+                    taggar mellan den bestämda "a" taggen och "#submenu1"..*/
+                    /*"#submenu1.hovered" <-- genom javascript så lyckades jag göra något..*/
     height: 148px;
-    transition: height 1s ease-in-out;
+    transition: height 0.5s ease-in-out;
 } 
- nav li #submenu1 li:hover #submenu2{ /* Vart tvungen att låta denna ligga på en egen rad då height behövde vara olika*/
+ nav li #submenu1 li:hover #submenu2, nav li #submenu1 a:focus + #submenu2, #submenu2.hovered{ /* Vart tvungen att låta denna ligga på en egen rad då height behövde vara olika*/
      display: block;
     height: 114px;
-    transition: height 1s ease-in-out;
+    transition: height 0.5s ease-in-out;
  }
+ /*Ett problem här är att (för tillfället) så stängs menyn när man tabbar till nästa alternativ
+ detta har att göra med att vi bara markerar "nav a". När vi hovrar så hovrar vi över hela listan
+ och det är därför problemet inte uppstår då.*/
  
-nav li:hover #fprint { /*ändrar hur fingreprinten är roterad.*/
+nav li:hover #fprint, nav a:focus #fprint { /*ändrar hur fingreprinten är roterad.*/
 -webkit-transform: rotate(3deg);
 }
 nav ul li a {
@@ -264,10 +271,18 @@ border-right: 2px black solid;
 /*border-bottom: 2px black solid;*/
 transition: 0.2s ease-in-out; /*animerar lite fint*/
 }
-#submenu2 li {
-width: 100px;
-box-shadow: 4px 9px 15px 7px rgba(27, 0, 0, 0.61);
-transition: 0.2s ease-in-out; /*animerar lite fint*/
+#submenu2 li{ /*använder http://prefixmycss.com/ för att snabbare fixa prefixen!*/ 
+width:100px;
+/*box-shadow*/
+-webkit-box-shadow:4px 9px 15px 7px rgba(27, 0, 0, 0.61);
+   -moz-box-shadow:4px 9px 15px 7px rgba(27, 0, 0, 0.61);
+        box-shadow:4px 9px 15px 7px rgba(27, 0, 0, 0.61);
+/*transition*/
+-webkit-transition:0.2s ease-in-out;
+   -moz-transition:0.2s ease-in-out;
+     -o-transition:0.2s ease-in-out;
+        transition:0.2s ease-in-out;
+/*animerar lite fint*/
 }
 /*Detta här över är min meny+submeny, testad på mobil och fungerar, vart tvungen att använda IDn för att 
 nav li ul li <-- påverkar alla i nav li ul li ul li: vilket som gör att submenyn till tankar syntes utan att 
@@ -376,7 +391,7 @@ text-decoration: underline;
     
 .main-container {
 background-image: url(../images/bakgrund.jpg);
-background-image: url(../images/bakgrund.jpg), url(../images/bakgrund1.jpg);
+background-image: url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
 background-position-x: 50%, 50%;
 background-repeat: no-repeat, repeat-y;
 background-size: 194%, 194%;
