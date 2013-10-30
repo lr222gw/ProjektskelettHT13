@@ -3,6 +3,10 @@
      font-family: momtw;
      src: url(fonts/Momtw.ttf);
 }
+@font-face{
+    font-family: normal;
+    src: url(fonts/Oranienbaum.ttf);
+}
 
 
 /* ==========================================================================
@@ -87,6 +91,11 @@ body {
 .footer-container,
 .main aside {
     border-top: 20px solid #260101;
+
+}
+aside {
+    margin-top: 20px;
+    margin-bottom: 120px;
 }
 
 .header-container,
@@ -162,7 +171,7 @@ z-index: 20;
 }
 .bild1 {
 width: 87%;
-background-image: url(scv.jpg);
+background-image: url(eye.png);
 background-size: 100%;
 background-repeat: no-repeat;
 position: fixed;
@@ -170,7 +179,7 @@ top: 0;
 height: 100%;
 margin: 0 0%;
 z-index: 1;
-opacity: 0.1;
+opacity: 0.5;
 }
 #logga {
 width: 100%;
@@ -200,6 +209,12 @@ width: 77%;
 max-width: 400px;
 -webkit-transition: 0.3s ease-in-out;
 }
+
+.images {
+position: relative;
+z-index: 10;
+
+}
 .images a:hover{
     zoom: 1.2;
     -webkit-transition: 0.3s ease-in-out;
@@ -225,9 +240,28 @@ text-decoration: none;
     padding: 30px 0;
 }
 
-.main article h1 {
+.main article h1, .main h1 { /*Fixar h1-titlar*/
     font-size: 2em;
+    font-family: momtw;
+    line-height: 1.2;
 }
+.main p { /*Fixar brödtexten*/ 
+font-family: normal;
+font-size: 1.3em;
+}
+footer p { /*Gör texten o footern italic*/
+font-style: italic;
+}
+footer h4 { /*flyttar footertiteln och p närmare varandra...*/
+margin-bottom: -25px;
+}
+aside h3 {
+font-family: momtw;
+}
+aside p { /* Gör texten i aside italic*/
+font-style: italic;
+}
+
 
 .main aside {
     color: white;
@@ -465,6 +499,7 @@ background-size: 194%, 194%;
     }
     .bild1{
         background-size: 1000px; /*Gör att bilden stannar vid 1000px när skärmen är över 1140px..*/
+        background-position: 50%;
     }
     .meny-wrapper {
     margin: 0 auto;
