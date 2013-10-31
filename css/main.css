@@ -230,9 +230,9 @@ opacity: 0.5;
 #logga {
 width: 100%;
 max-width: 700px;
-box-shadow: 0 -10px 23px 17px rgb(48, 134, 110);
+/*box-shadow: 0 -10px 23px 17px rgb(48, 134, 110);
 border-left: 1px solid rgb(0, 0, 0);
-border-right: 1px solid rgb(0, 0, 0);
+border-right: 1px solid rgb(0, 0, 0); Tar bort detta då jag har en ny logga utan kanter..*/
 max-height: 300px;
 }
 .title {
