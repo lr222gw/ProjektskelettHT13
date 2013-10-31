@@ -352,6 +352,28 @@ z-index: 40;
 transition: 0.5s ease-in-out;
 }
 
+#arrow {
+background-image: url(arrow.png);
+background-repeat: no-repeat;
+background-size: 9px;
+height: 20px;
+width: 20px;
+border: black 1px solid;
+background-position: center;
+background-color: black;
+border-radius: 12px;
+position: relative;
+top: -25px;
+left: 90%;
+margin-bottom: -22px;
+-webkit-transform: rotate(180deg);
+transition: 0.4s ease-in-out;
+}
+nav li #submenu1 li:hover #arrow, nav li #submenu1 a:focus #arrow, nav li #submenu1 a #submenu2.hovered + #arrow  {
+-webkit-transform: rotate(90deg);
+transition: 0.4s ease-in-out;
+} /*Gör så att pilen ändrar sig när man hovrar/har fokus på den..*/
+
 #submenu2 {
 position: absolute;
 margin: 0 40px 10px 0px;
@@ -505,7 +527,7 @@ text-align: center;
     display: block;
     height: auto; /*Genom att använda Auto så försvinner animationen, men det löser problemet med att andra saker måste ligga rätt..*/
     transition: height 0.5s ease-in-out;
-    width: 100%;
+    width: 99.86%;
     margin-top: 35px;
     border-top: 1px solid black;
     }
