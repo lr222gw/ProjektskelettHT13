@@ -108,6 +108,9 @@ aside {
 .header-container{
     background: rgb(0, 0, 0);
 }
+.main.wrapper.clearfix { /*Sätter en minst storlek gräns på höjden så att sidan aldrig blir "för kort"...*/
+min-height: 480px;
+}
 
 
 .title {
@@ -168,6 +171,19 @@ margin-top: 65px;
 position: relative; /*Denna och Top: -75px gör så att artiklarna börjar strax under navigationen.*/
 top: -75px;
 z-index: 20;
+}
+/*För formuläret..*/
+label {
+    display: block;
+}
+form{
+    padding: 30px;
+}
+fieldset {
+border: 1px black solid;
+padding: 15px;
+background-color: rgba(141, 23, 23, 0.74);
+border-radius: 6px;
 }
 .bild1 {
 width: 87%;
@@ -363,13 +379,19 @@ nav li ul li <-- påverkar alla i nav li ul li ul li: vilket som gör att submen
 hålla muspekaren över den...*/
 #where {
 background-color: rgba(0, 0, 0, 0.57);
-height: 32px;
 width: 100px;
 margin-top: -30px;
 margin-left: 5px;
 border-radius: 3px;
 margin-bottom: 2px;
 text-decoration: underline;
+/*gör om denna så att den fungerar på storbildsläge..*/
+position: relative;
+top: 65px;
+font-family: sans-serif;
+font-weight: bold;
+color: white;
+text-align: center;
 }
 
 .meny-wrapper{
@@ -446,9 +468,68 @@ text-decoration: underline;
     }
 
     nav {
-        float: right;
-        width: 38%;
+       /* float: right; Float: right fungerar ej då man ska ge menyn en höjd..*/ 
+        width: 100%;
+        height: 37px;
+        background-color: black;
     }
+    nav li #submenu1 {
+    display: block;
+    transition: height 0.5s ease-in-out;
+    height: auto;
+    overflow: visible;
+    }
+    .navhide { /*Gömmer "visa navigation" när man har större skärm..*/
+    display: none;
+
+    }
+    nav a {
+    float: left;
+    width: 24%;
+    margin-right: .5%;
+    margin-left: .5%; /*jag använder margin här så att det blir en skildring mellan
+                        de olika meny alternativen. jag kunde använt border men border
+                        jobbar inte med "%" så det blev problem då mellanrummen mellan
+                        alla alternativ inte får överstiga 1%... genom att sätta 
+                        background-color till svart på nav.. så ser det ut som om man använder
+                        någon form av border...*/
+    
+    }
+    nav li:hover #submenu1, nav a:focus + #submenu1, #submenu1.hovered {
+    display: block;
+    height: 0;
+    transition: height 0.5s ease-in-out;
+    }
+    /*Fixar navigationen till sidan..*/
+    nav li #submenu1 li:hover #submenu2, nav li #submenu1 a:focus + #submenu2, #submenu2.hovered {
+    display: block;
+    height: auto; /*Genom att använda Auto så försvinner animationen, men det löser problemet med att andra saker måste ligga rätt..*/
+    transition: height 0.5s ease-in-out;
+    width: 100%;
+    margin-top: 35px;
+    border-top: 1px solid black;
+    }
+    #submenu2 {
+    background-color: black;
+    }
+    #submenu2 a {
+    width: 29%;
+    margin-left: 3%;
+    height: 35px; /*Vi gör height högre på submenyn så det blir lättare att navigera på den..*/
+    padding-top: 15px;
+    }
+    #where {
+    top: -5px;
+    background-color: rgba(105, 0, 0, 0.81);
+    border: 1px black solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+    margin-top: -40px;
+    text-align: center;
+    }
+
+    
 
 /* ============
     WIDE: Main
