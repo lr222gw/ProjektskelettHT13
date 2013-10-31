@@ -175,16 +175,32 @@ z-index: 20;
 /*För formuläret..*/
 label {
     display: block;
+    font-family: normal;
+    font-size: 1.2em;
+    margin-top: 10px; /*gör lite mellanrum mellan alla formulärinputs..*/
+
 }
 form{
     padding: 30px;
+}
+legend {
+border: 0;
+padding: 0;
+white-space: normal;
+font-family: momtw;
+font-size: 1.3em;
 }
 fieldset {
 border: 1px black solid;
 padding: 15px;
 background-color: rgba(141, 23, 23, 0.74);
 border-radius: 6px;
+margin-bottom: 10px;
 }
+textarea{
+    
+}
+
 .bild1 {
 width: 87%;
 background-image: url(eye.png);
