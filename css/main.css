@@ -75,6 +75,18 @@ body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
 
+/*Fixar så sidan blir lika lång som skärmen.. man ger alla block som håller i 
+content blocket 100%  height och då kan även content blocket vara 100% */
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+.main-container{
+    min-height: 100%;
+} /*Obs blir ett stort mellanrum, vet inte varför.. hmm?*/
+
 .wrapper {
     width: 85%; /*Ser till att texten är centrerad på sidorna*/
     margin: 0 7%;
@@ -156,6 +168,8 @@ nav a:hover, nav a:focus {
     background-position: top, bottom;
     background-repeat: no-repeat, repeat-y;
     background-size: 194%, 194%;
+    background-color: black; /*har man en extremt stor skärm så kommer bakgrunden utöver
+                                bilden att vara svart och inte, som standarden, vit.*/
     }
 /*Ariklar!*/
 article, form, main {
@@ -543,9 +557,11 @@ text-align: center;
     display: block;
     height: auto; /*Genom att använda Auto så försvinner animationen, men det löser problemet med att andra saker måste ligga rätt..*/
     transition: height 0.5s ease-in-out;
-    width: 99.86%;
-    margin-top: 35px;
+    width: 50%;
+    margin-left: 13%;
+    margin-top: 38px;
     border-top: 1px solid black;
+    border-radius: 0 0 10px 10px;
     }
     #submenu2 {
     background-color: black;
