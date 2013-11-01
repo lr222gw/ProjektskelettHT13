@@ -506,9 +506,9 @@ text-align: center;
 
     .header-container,
     .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
+        -webkit-box-shadow: 0 23px 31px rgb(31, 0, 0);
+           -moz-box-shadow: 0 23px 31px rgb(31, 0, 0);
+                box-shadow: 0 23px 31px rgb(31, 0, 0);        
     }
 
 /* ============
@@ -716,7 +716,57 @@ background-size: 194%, 194%;
         box-shadow: none !important;
         text-shadow: none !important;
     }
+    body{
+        position: relative;
+    }
 
+    nav {
+        display: none;
+    }
+    .footer-container {
+        display: none;
+    }
+    #logga{
+        display: none;
+    }
+    .title{
+        display: block;
+        color: black;
+    }
+    .meny-wrapper {
+    margin: 0 auto;
+    padding: 0px 0px;
+    width: auto;
+    }
+    .meny-wrapper h1 {
+    text-align: left;
+    border-bottom: 2px black solid;
+    }
+    .meny-wrapper h1:before{
+        content: "taget från "; /*Lägger till texten "taget från" framför titeln..*/
+        font-size: 0.5em;
+    }
+    .meny-wrapper h1:after{
+    content: ".se";
+    }
+    .main aside {
+    border-top: 0 solid #260101;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0 0 10px;
+    page-break-inside: avoid; /*Så att sidan inte splittas på två delar om möjligt..*/
+    }
+    article{
+        margin-top: 5px;
+        position: static;
+        page-break-inside: avoid; /*Så att sidan inte splittas på två delar om möjligt..*/
+    }
+    .images a{
+        border: 1px black solid; /*ger en kant runt ramarna så att det ser bättre ut mot
+                                    den vita bakgrunden..*/
+        page-break-inside: avoid; /*vill inte att bilderna ska kunna bli halva..*/                            
+    }
+    
     a,
     a:visited {
         text-decoration: underline;
