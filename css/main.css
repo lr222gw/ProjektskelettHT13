@@ -82,13 +82,21 @@ html, body{
 }
 
 .main-container{
-    min-height: 100%;
+    /* min-height: 100%;  Använder inte detta längre.. sparar det som referens..*/
 } /*Obs blir ett stort mellanrum, vet inte varför.. hmm?*/
+#content { /*Detta löste problemet ^över.. Problemet var att det blev 100% height beroende på vad bodys height var,
+            så man kunde istället tilldelat bakgrunden till body istället för #main-content. Jag gjorde istället
+            ett nytt ID som fångar alla delar av sidan (header, content, footer) och ger den height:100% samt 
+            samma egenskaper som main-content hade.. main-content kommer inte längre styra över bakgrunderna..
+            Problem som medförs med detta är footern, den måste nu ligga i botten av sidan och vara absolut.*/
+height: 100%;
+}
 
 .wrapper {
     width: 85%; /*Ser till att texten är centrerad på sidorna*/
     margin: 0 7%;
 }
+
 
 /* ===================
     ALL: Orange Theme
@@ -109,12 +117,18 @@ aside {
 }
 
 .header-container,
-.footer-container,
 .main aside {
     background: #730202;
     position: relative;
     z-index: 5;
 }
+.footer-container { 
+    position: absolute;
+    background: #730202;
+    width: 100%;
+    z-index: 5;
+    bottom: 0;
+    }
 .header-container{
     background: rgb(0, 0, 0);
 }
@@ -157,7 +171,7 @@ nav a:hover, nav a:focus {
         background: #D90416;
     }
 /*BAKGRUNDEN*/
-    .main-container {
+    .main-container, #content {
     background-image: url(../images/bakgrund.jpg);
     background-image: url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
     background-position: top, bottom;
@@ -595,7 +609,7 @@ nav li #submenu1 li:hover #arrow, nav li #submenu1 a:focus #arrow, nav li #subme
         width: 28%;
         }
     
-    .main-container {
+    .main-container, #content {
         background-image: url(../images/bakgrund.jpg);
         background-image: url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
         background-position-x: 50%, 50%;
@@ -618,7 +632,7 @@ nav li #submenu1 li:hover #arrow, nav li #submenu1 a:focus #arrow, nav li #subme
         margin: 0 auto;
     }
     /*LOWE LÄGGER IN*/
-    .main-container {
+    .main-container, #content {
         background-image: url(../images/bakgrund.jpg);
         background-image: url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
         background-position-x: 50%, 50%;
