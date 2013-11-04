@@ -27,3 +27,4 @@ på submenu1 och 2 som sedan går att manipulera när en a-tagg har focus... det
 Johan hjälpte mig, istället för "toggleClass" så använde vi add class, 
 sen lade vi till att "focusout" skulle removeclass <-- innebär att när man inte längre har
 focus på denna klass så försvinner klassen.*/
+

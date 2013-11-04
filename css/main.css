@@ -1,12 +1,14 @@
 /*Lägger in externa typsnitt*/
 @font-face{
-font-family:momtw;
-src:url(fonts/Momtw.ttf);
+     font-family: momtw;
+     src: url(fonts/Momtw.ttf);
 }
 @font-face{
-font-family: normal;
+    font-family: normal;
     src: url(fonts/Oranienbaum.ttf);
 }
+
+
 /* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
    ========================================================================== */
@@ -15,47 +17,57 @@ html,
 button,
 input,
 select,
-textarea{
-color:#222;
+textarea {
+    color: #222;
 }
-body{
-font-size:1em;
-line-height:1.4;
-font:16px/26px Helvetica, Helvetica Neue, Arial;
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
 }
-::-moz-selection{
-background:#b3d4fc;
-text-shadow:none;
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
-::selection{
-background:#b3d4fc;
-text-shadow:none;
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
 }
-hr{
-display:block;
-height:1px;
-border:0;
-border-top:1px solid #ccc;
-margin:1em 0;
-padding:0;
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
-img{
-vertical-align:middle;
+
+img {
+    vertical-align: middle;
 }
-fieldset{
-border:0;
-margin:0;
-padding:0;
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
-textarea{
-resize:vertical;
+
+textarea {
+    resize: vertical;
 }
-.chromeframe{
-margin:0.2em 0;
-background:#ccc;
-color:#000;
-padding:0.2em 0;
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
+
+
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
@@ -66,852 +78,767 @@ padding:0.2em 0;
 /*Fixar så sidan blir lika lång som skärmen.. man ger alla block som håller i 
 content blocket 100%  height och då kan även content blocket vara 100% */
 html, body{
-height:100%;
+    height: 100%;
 }
+
 .main-container{
-/* min-height: 10*/
-min-height:100%;
-/*Använder inte detta längre.. sparar det som referens..*/
-}
-/*Obs blir ett stort mellanrum, vet inte varför.. hmm?*/
-#content{
-/*Detta löste problemet ^över.. Problemet var att det blev 100% height beroende på vad bodys height var,
+    /* min-height: 100%;  Använder inte detta längre.. sparar det som referens..*/
+} /*Obs blir ett stort mellanrum, vet inte varför.. hmm?*/
+#content { /*Detta löste problemet ^över.. Problemet var att det blev 100% height beroende på vad bodys height var,
             så man kunde istället tilldelat bakgrunden till body istället för #main-content. Jag gjorde istället
             ett nytt ID som fångar alla delar av sidan (header, content, footer) och ger den height:100% samt 
             samma egenskaper som main-content hade.. main-content kommer inte längre styra över bakgrunderna..
             Problem som medförs med detta är footern, den måste nu ligga i botten av sidan och vara absolut.*/
-height:100%;
-position:relative;
-height:auto !important;
-/**/
-min-height:100%;
+height: 100%;
+position: relative;
+height: auto !important; /**/
+height: 100%;
+min-height: 100%;
 }
-.wrapper{
-width:85%;
-/*Ser till att texten är centrerad på sidorna*/
-margin:0 7%;
+
+.wrapper {
+    width: 85%; /*Ser till att texten är centrerad på sidorna*/
+    margin: 0 7%;
 }
+
+
 /* ===================
     ALL: Orange Theme
    =================== */
 
-.header-container{
-/*border-bottom: 5px solid #0000*/
+.header-container {
+   /*border-bottom: 5px solid #000000; */
 }
+
 .footer-container,
-.main aside{
-border-top:20px solid #260101;
+.main aside {
+    border-top: 20px solid #260101;
+
 }
-aside{
-margin-top:20px;
-margin-bottom:120px;
+aside {
+    margin-top: 20px;
+    margin-bottom: 120px;
 }
+
 .header-container,
-.main aside{
-background:#730202;
-position:relative;
-z-index:5;
+.main aside {
+    background: #730202;
+    position: relative;
+    z-index: 5;
 }
-.footer-container{
-position:absolute;
-background:#730202;
-width:100%;
-z-index:5;
-bottom:-100px;
-/*sätter denna till negativ så att man får lite plats till innehållet i main-content.. (så att det
+.footer-container { 
+    position: absolute;
+    background: #730202;
+    width: 100%;
+    z-index: 5;
+    bottom: -100px; /*sätter denna till negativ så att man får lite plats till innehållet i main-content.. (så att det
                     inte ligger på footern...).
                     OBS dåligt med denna lösning, alla sidor behöver man skrolla ner på för att se footern.. även om det
                     ej skulle behövas.. anledningen att man inte kunde lösa det med margin är för att Footern är absolute...*/
-
-}
+    }
 .header-container{
-background:rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
 }
-.title{
-color:white;
+
+
+.title {
+    color: white;
 }
+
 /* ==============
     MOBILE: Menu
    ============== */
-nav ul{
-margin:0;
-padding:0;
+nav ul {
+    margin: 0;
+    padding: 0;
 }
-nav a{
-display:block;
-/*margin-botto*/
-/*margin-bottom:10px;
-*/
-    border-bottom:black 1px solid;
-padding:5px 0;
-text-align:center;
-text-decoration:none;
-font-weight:bold;
-color:white;
-background:#A60303;
--webkit-transition:0.2s ease-in-out;
--moz-transition:0.2s ease-in-out;
--o-transition:0.2s ease-in-out;
-transition:0.2s ease-in-out;
-/*animerar lite fint*/
 
-}
+nav a {
+    display: block;
+    /*margin-bottom: 10px;*/
+    border-bottom: black 1px solid;
+    padding: 5px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #A60303;
+    transition: 0.2s ease-in-out; /*animerar lite fint*/
+    }
+
 nav a:hover, nav a:focus,
-nav a:visited{
-color:white;
-}
-nav a:hover, nav a:focus{
-text-decoration:underline;
-background:#D90416;
-}
+nav a:visited {
+    color: white;
+    }
+
+nav a:hover, nav a:focus {
+    text-decoration: underline; 
+        background: #D90416;
+    }
 /*BAKGRUNDEN*/
-    .main-container, #content{
-background-image:url(../images/bakgrund.jpg);
-background-image:url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
-background-position:top, bottom;
-background-repeat:no-repeat, repeat-y;
--webkit-background-size:194%, 194%;
--moz-background-size:194%, 194%;
--o-background-size:194%, 194%;
-background-size:194%, 194%;
-background-color:black;
-/*har man en extremt stor skärm så kommer bakgrunden utöver
+    .main-container, #content {
+    background-image: url(../images/bakgrund.jpg);
+    background-image: url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat-y;
+    background-size: 194%, 194%;
+    background-color: black; /*har man en extremt stor skärm så kommer bakgrunden utöver
                                 bilden att vara svart och inte, som standarden, vit.*/
-
-}
+    }
 /*Ariklar!*/
-article, form, main{
-background-color:rgba(90, 0, 0, 0.38);
-padding:10px;
-background-image:url(oldpaper.png);
-background-repeat:repeat-y;
--webkit-background-size:100%;
--moz-background-size:100%;
--o-background-size:100%;
-background-size:100%;
--webkit-border-radius:5px;
--moz-border-radius:5px;
-border-radius:5px;
--webkit-box-shadow:inset 0px 0px 20px 2px black;
--moz-box-shadow:inset 0px 0px 20px 2px black;
-box-shadow:inset 0px 0px 20px 2px black;
-/*Ger en trevlig skugga på sindian av ramen..*/
-color:rgb(255, 255, 255);
-/*Ändrar färgen på bokstäverna..*/
-margin-top:65px;
-position:relative;
-/*Denna och Top: -75px gör så att artiklarna börjar strax under navigationen.*/
-top:-75px;
-z-index:20;
-}
+article, form, main {
+    background-color: rgba(90, 0, 0, 0.38);
+    padding: 10px;
+    background-image: url(oldpaper.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 20px 2px black; /*Ger en trevlig skugga på sindian av ramen..*/
+    color: rgb(255, 255, 255); /*Ändrar färgen på bokstäverna..*/
+    margin-top: 65px;
+    position: relative; /*Denna och Top: -75px gör så att artiklarna börjar strax under navigationen.*/
+    top: -75px;
+    z-index: 20;
+    }
 /*För formuläret..*/
-label{
-display:block;
-font-family:normal;
-font-size:1.2em;
-margin-top:10px;
-/*gör lite mellanrum mellan alla formulärinputs..*/
-
-}
+label {
+    display: block;
+    font-family: normal;
+    font-size: 1.2em;
+    margin-top: 10px; /*gör lite mellanrum mellan alla formulärinputs..*/
+    
+    }
 form{
-padding:30px;
-}
-legend{
-border:0;
-padding:0;
-white-space:normal;
-font-family:momtw;
-font-size:1.3em;
-}
-fieldset{
-border:1px black solid;
-padding:15px;
-background-color:rgba(141, 23, 23, 0.74);
--webkit-border-radius:6px;
--moz-border-radius:6px;
-border-radius:6px;
-margin-bottom:10px;
-}
+    padding: 30px;
+    }
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    font-family: momtw;
+    font-size: 1.3em;
+    }
+fieldset {
+    border: 1px black solid;
+    padding: 15px;
+    background-color: rgba(141, 23, 23, 0.74);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    }
 textarea{
-/*Tom tillsvidare..*/
+    /*Tom tillsvidare..*/ 
+    }
 
-}
-.bild1{
-width:87%;
-background-image:url(eye.png);
--webkit-background-size:100%;
--moz-background-size:100%;
--o-background-size:100%;
-background-size:100%;
-background-repeat:no-repeat;
-position:fixed;
-top:0;
-height:100%;
-margin:0 8%;
-z-index:1;
-opacity:0.5;
-}
-#logga{
-width:100%;
-max-width:700px;
-/*box-shadow: 0 -10px 23px 17px rgb(48, 13*/
-/*box-shadow:0 -10px 23px 17px rgb(48, 134, 110);
-border-left:1px solid rgb(0, 0, 0);
-border-right:1px solid rgb(0, 0, 0);
-Tar bort detta då jag har en ny logga utan kanter..*/
-    max-height:300px;
-}
-.title{
-display:none;
-}
+.bild1 {
+    width: 87%;
+    background-image: url(eye.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    margin: 0 8%;
+    z-index: 1;
+    opacity: 0.5;
+    }
+#logga {
+    width: 100%;
+    max-width: 700px;
+    /*box-shadow: 0 -10px 23px 17px rgb(48, 134, 110);
+    border-left: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0); Tar bort detta då jag har en ny logga utan kanter..*/
+    max-height: 300px;
+    }
+.title {
+    display: none;
+    }
+
 /*Bildgalleri CSS-inställningar*/
-.images a img{
-max-width:470px;
-max-height:350px;
-width:100%;
-/*Gör bilderna responsiva men de kan inte bli bredare än 470 */
+.images a img {
+    max-width: 470px;
+    max-height: 350px;
+    width: 100%; /*Gör bilderna responsiva men de kan inte bli bredare än 470 */
+    }
+.images a {
+    display: block;
+    float: left;
+    padding: 10px 10px 20px 10px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 1px 1px 8px 1px black;
+    margin: 5px 5px 5px 0;
+    width: 77%;
+    max-width: 400px;
+    -webkit-transition: 0.3s ease-in-out;
+    }
 
-}
-.images a{
-display:block;
-float:left;
-padding:10px 10px 20px 10px;
-background-color:rgb(248, 248, 248);
--webkit-box-shadow:1px 1px 8px 1px black;
--moz-box-shadow:1px 1px 8px 1px black;
-box-shadow:1px 1px 8px 1px black;
-margin:5px 5px 5px 0;
-width:77%;
-max-width:400px;
--webkit-transition:0.3s ease-in-out;
--moz-transition:0.3s ease-in-out;
--o-transition:0.3s ease-in-out;
-transition:0.3s ease-in-out;
-}
-.images{
-position:relative;
-z-index:10;
-}
+.images {
+    position: relative;
+    z-index: 10;
+
+    }
 .images a:hover{
-zoom:1.2;
--webkit-transition:0.3s ease-in-out;
--moz-transition:0.3s ease-in-out;
--o-transition:0.3s ease-in-out;
-transition:0.3s ease-in-out;
+    zoom: 1.2;
+    -webkit-transition: 0.3s ease-in-out;
 }
-.images a:after{
-content:attr(title);
-font-size:30px;
-display:block;
-font-family:momtw;
-padding-top:15px;
-color:black;
-text-align:center;
-}
-.images a:link{
-/*tar bort textdecorationer, understreck..*/
-text-decoration:none;
-}
+.images a:after {
+    content: attr(title);
+    font-size: 30px;
+    display: block;
+    font-family: momtw;
+    padding-top: 15px;
+    color: black;
+    text-align: center;
+    }
+.images a:link { /*tar bort textdecorationer, understreck..*/
+    text-decoration: none;
+    }
+
 /* ==============
     MOBILE: Main
    ============== */
 
-.main{
-padding:30px 0;
+.main {
+    padding: 30px 0;
 }
-.main article h1, .main h1{
-/*Fixar h1-titlar*/
-font-size:2em;
-font-family:momtw;
-line-height:1.2;
+
+.main article h1, .main h1 { /*Fixar h1-titlar*/
+    font-size: 2em;
+    font-family: momtw;
+    line-height: 1.2;
 }
-.main p{
-/*Fixar brödtexten*/
-font-family:normal;
-font-size:1.3em;
+.main p { /*Fixar brödtexten*/ 
+    font-family: normal;
+    font-size: 1.3em;
+    }
+footer p { /*Gör texten o footern italic*/
+    font-style: italic;
+    }
+footer h4 { /*flyttar footertiteln och p närmare varandra...*/
+    margin-bottom: -25px;
+    }
+aside h3 {
+    font-family: momtw;
+    }
+aside p { /* Gör texten i aside italic*/
+    font-style: italic;
+    }
+
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
 }
-footer p{
-/*Gör texten o footern italic*/
-font-style:italic;
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
 }
-footer h4{
-/*flyttar footertiteln och p närmare varandra...*/
-margin-bottom:-25px;
-}
-aside h3{
-font-family:momtw;
-}
-aside p{
-/* Gör texten i aside italic*/
-font-style:italic;
-}
-.main aside{
-color:white;
-padding:0px 5% 10px;
-}
-.footer-container footer{
-color:white;
-padding:20px 0;
-}
+
 /* ===============
     ALL: IE Fixes
    =============== */
 
-.ie7 .title{
-padding-top:20px;
+.ie7 .title {
+    padding-top: 20px;
 }
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 /*LOWE LÄGGER IN NY MENY SAK */
-nav{
-z-index:30;
-/*gör att undermenyerna inte hamnar under artiklarna*/
-position:relative;
-border-top:5px solid #000000;
-}
-nav li #submenu1, nav li ul li #submenu2{
-/*gör så att undermenyerna gömmer sig när de inte ska synas..*/
-display:block;
-/*Submeny 1 och 2 får vara idn då det bara finns 2 submenyer som gör olika saker..*/
+nav { 
+    z-index: 30; /*gör att undermenyerna inte hamnar under artiklarna*/
+    position: relative;
+    border-top: 5px solid #000000;
+    } 
+nav li #submenu1, nav li ul li #submenu2 { /*gör så att undermenyerna gömmer sig när de inte ska synas..*/
+    display: block;  /*Submeny 1 och 2 får vara idn då det bara finns 2 submenyer som gör olika saker..*/
     /*jag låter display vara block här för då kan det bli en snygg transition*/
--webkit-transition:height 0.5s ease-in-out;
--moz-transition:height 0.5s ease-in-out;
--o-transition:height 0.5s ease-in-out;
-transition:height 0.5s ease-in-out;
-height:0;
-overflow:hidden;
-}
-nav li:hover #submenu1, nav a:focus +  #submenu1, #submenu1.hovered{
-/*Gör så att undermenyn visas när man hovrar över li-taggarna..*/
-display:block;
-/*"nav a:focus + #submenu1" betyder att när man hovrar över a så ska #submenu1 få egenskaperna
+    transition: height 0.5s ease-in-out;
+    height: 0;
+    overflow: hidden;
+} 
+nav li:hover #submenu1, nav a:focus +  #submenu1, #submenu1.hovered { /*Gör så att undermenyn visas när man hovrar över li-taggarna..*/
+    display: block; /*"nav a:focus + #submenu1" betyder att när man hovrar över a så ska #submenu1 få egenskaperna
                     Mellan måsvingarna. Detta måste man göra för att #submenu1 inte är ett barn till a utan "en granne".
                     Man använder "*"-teckenet för att nå grannen. Detta fungerar bara om det inte finns några andra
                     taggar mellan den bestämda "a" taggen och "#submenu1"..*/
                     /*"#submenu1.hovered" <-- genom javascript så lyckades jag göra något..*/
-height:148px;
--webkit-transition:height 0.5s ease-in-out;
--moz-transition:height 0.5s ease-in-out;
--o-transition:height 0.5s ease-in-out;
-transition:height 0.5s ease-in-out;
-}
-nav li #submenu1 li:hover #submenu2, nav li #submenu1 a:focus + #submenu2, #submenu2.hovered{
-/* Vart tvungen att låta denna ligga på en egen rad då height behövde vara olika*/
-display:block;
-height:114px;
--webkit-transition:height 0.5s ease-in-out;
--moz-transition:height 0.5s ease-in-out;
--o-transition:height 0.5s ease-in-out;
-transition:height 0.5s ease-in-out;
-}
-/*Ett problem här är att (för tillfället) så stängs menyn när man tabbar till nästa alternativ
+    height: 148px;
+    transition: height 0.5s ease-in-out;
+} 
+ nav li #submenu1 li:hover #submenu2, nav li #submenu1 a:focus + #submenu2, #submenu2.hovered{ /* Vart tvungen att låta denna ligga på en egen rad då height behövde vara olika*/
+     display: block;
+    height: 114px;
+    transition: height 0.5s ease-in-out;
+ }
+ /*Ett problem här är att (för tillfället) så stängs menyn när man tabbar till nästa alternativ
  detta har att göra med att vi bara markerar "nav a". När vi hovrar så hovrar vi över hela listan
  och det är därför problemet inte uppstår då.*/
  
-nav li:hover #fprint, nav a:focus #fprint{
-/*ändrar hur fingreprinten är roterad.*/
--webkit-transform:rotate(3deg);
--moz-transform:rotate(3deg);
--ms-transform:rotate(3deg);
--o-transform:rotate(3deg);
-transform:rotate(3deg);
-}
-nav ul li a{
--webkit-box-shadow:inset 0px 14px 138px -27px rgba(0, 0, 0, 0.81);
--moz-box-shadow:inset 0px 14px 138px -27px rgba(0, 0, 0, 0.81);
-box-shadow:inset 0px 14px 138px -27px rgba(0, 0, 0, 0.81);
-/*Denna gör navigation lite mörkare, den under gör sp att de ärvande menyerna inte påverkas.*/
-}
-nav ul li ul li a{
--webkit-box-shadow:inset 0 0px 0px 0px black;
--moz-box-shadow:inset 0 0px 0px 0px black;
-box-shadow:inset 0 0px 0px 0px black;
-}
-#fprint{
-background-image:url(fprint.png);
-background-position:50% -2px;
-background-repeat:no-repeat;
--webkit-transform:rotate(27deg);
--moz-transform:rotate(27deg);
--ms-transform:rotate(27deg);
--o-transform:rotate(27deg);
-transform:rotate(27deg);
-height:31px;
-position:relative;
-z-index:40;
--webkit-transition:0.5s ease-in-out;
--moz-transition:0.5s ease-in-out;
--o-transition:0.5s ease-in-out;
-transition:0.5s ease-in-out;
-}
-#arrow{
-background-image:url(arrow.png);
-background-repeat:no-repeat;
--webkit-background-size:9px;
--moz-background-size:9px;
--o-background-size:9px;
-background-size:9px;
-height:20px;
-width:20px;
-border:black 1px solid;
-background-position:center;
-background-color:black;
--webkit-border-radius:12px;
--moz-border-radius:12px;
-border-radius:12px;
-position:relative;
-top:-25px;
-left:90%;
-margin-bottom:-22px;
--webkit-transform:rotate(180deg);
--moz-transform:rotate(180deg);
--ms-transform:rotate(180deg);
--o-transform:rotate(180deg);
-transform:rotate(180deg);
--webkit-transition:0.4s ease-in-out;
--moz-transition:0.4s ease-in-out;
--o-transition:0.4s ease-in-out;
-transition:0.4s ease-in-out;
-}
-nav li #submenu1 li:hover #arrow, nav li #submenu1 a:focus #arrow, nav li #submenu1 a #submenu2.hovered + #arrow{
--webkit-transform:rotate(90deg);
--moz-transform:rotate(90deg);
--ms-transform:rotate(90deg);
--o-transform:rotate(90deg);
-transform:rotate(90deg);
--webkit-transition:0.4s ease-in-out;
--moz-transition:0.4s ease-in-out;
--o-transition:0.4s ease-in-out;
-transition:0.4s ease-in-out;
-}
-/*Gör så att pilen ändrar sig när man hovrar/har fokus på den..*/
+nav li:hover #fprint, nav a:focus #fprint { /*ändrar hur fingreprinten är roterad.*/
+    -webkit-transform: rotate(3deg);
+    }
+nav ul li a {
+    box-shadow: inset 0px 14px 138px -27px rgba(0, 0, 0, 0.81); /*Denna gör navigation lite mörkare, den under gör sp att de ärvande menyerna inte påverkas.*/
+    }
+nav ul li ul li a {
+    box-shadow: inset 0 0px 0px 0px black; 
+    }
+#fprint {
+    background-image: url(fprint.png);
+    background-position: 50% -2px;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(27deg);
+    height: 31px;
+    position: relative;
+    z-index: 40;
+    transition: 0.5s ease-in-out;
+    }
 
-#submenu2{
-position:absolute;
-margin:0 40px 10px 0px;
-background-color:#260101;
-margin-top:-1px;
-border-right:2px black solid;
-/*border-bottom: 2px blac*/
-/*border-bottom:2px black solid;
-*/
-    transition:0.2s ease-in-out;
-/*animerar lite fint*/
-}
-#submenu2 li{
-/*använder http://prefixmycss.com/ för att snabbare fixa prefixen!*/
-width:100px;
-/*box-shadow*/
--webkit-box-shadow:4px 9px 15px 7px rgba(27, 0, 0, 0.61);
--moz-box-shadow:4px 9px 15px 7px rgba(27, 0, 0, 0.61);
-box-shadow:4px 9px 15px 7px rgba(27, 0, 0, 0.61);
-/*transition*/
--webkit-transition:0.2s ease-in-out;
--moz-transition:0.2s ease-in-out;
--o-transition:0.2s ease-in-out;
-transition:0.2s ease-in-out;
-/*animerar lite fint*/
-}
-/*Detta här över är min meny+submeny, testad på mobil och fungerar, vart tvungen att använda IDn för att 
+#arrow {
+    background-image: url(arrow.png);
+    background-repeat: no-repeat;
+    background-size: 9px;
+    height: 20px;
+    width: 20px;
+    border: black 1px solid;
+    background-position: center;
+    background-color: black;
+    border-radius: 12px;
+    position: relative;
+    top: -25px;
+    left: 90%;
+    margin-bottom: -22px;
+    -webkit-transform: rotate(180deg);
+    transition: 0.4s ease-in-out;
+    }
+nav li #submenu1 li:hover #arrow, nav li #submenu1 a:focus #arrow, nav li #submenu1 a #submenu2.hovered + #arrow  {
+    -webkit-transform: rotate(90deg);
+    transition: 0.4s ease-in-out;
+    } /*Gör så att pilen ändrar sig när man hovrar/har fokus på den..*/
+
+#submenu2 {
+    position: absolute;
+    margin: 0 40px 10px 0px;
+    background-color: #260101;
+    margin-top: -1px;
+    border-right: 2px black solid;
+    /*border-bottom: 2px black solid;*/
+    transition: 0.2s ease-in-out; /*animerar lite fint*/
+    }
+#submenu2 li{ /*använder http://prefixmycss.com/ för att snabbare fixa prefixen!*/ 
+    width:100px;
+    /*box-shadow*/
+    -webkit-box-shadow:4px 9px 15px 7px rgba(27, 0, 0, 0.61);
+       -moz-box-shadow:4px 9px 15px 7px rgba(27, 0, 0, 0.61);
+            box-shadow:4px 9px 15px 7px rgba(27, 0, 0, 0.61);
+    /*transition*/
+    -webkit-transition:0.2s ease-in-out;
+       -moz-transition:0.2s ease-in-out;
+         -o-transition:0.2s ease-in-out;
+            transition:0.2s ease-in-out;
+    /*animerar lite fint*/
+    }
+    /*Detta här över är min meny+submeny, testad på mobil och fungerar, vart tvungen att använda IDn för att 
     nav li ul li <-- påverkar alla i nav li ul li ul li: vilket som gör att submenyn till tankar syntes utan att 
     hålla muspekaren över den...*/
-#where{
-background-color:rgba(0, 0, 0, 0.57);
-width:100px;
-margin-top:-30px;
-margin-left:5px;
--webkit-border-radius:3px;
--moz-border-radius:3px;
-border-radius:3px;
-margin-bottom:2px;
-text-decoration:underline;
-/*gör om denna så att den fungerar på storbildsläge..*/
-position:relative;
-top:65px;
-font-family:sans-serif;
-font-weight:bold;
-color:white;
-text-align:center;
-}
+#where {
+    background-color: rgba(0, 0, 0, 0.57);
+    width: 100px;
+    margin-top: -30px;
+    margin-left: 5px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    text-decoration: underline;
+    /*gör om denna så att den fungerar på storbildsläge..*/
+    position: relative;
+    top: 65px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    }
+
 .meny-wrapper{
-margin:0 10%;
-/*Centrerar titeln på sidan och ger margin så att 5% kapas på båda sidorna*/
-padding:0px 0px;
-/*Gör den lite högre så att man kan ha en bild där sen*/
+    margin: 0 10%; /*Centrerar titeln på sidan och ger margin så att 5% kapas på båda sidorna*/
+    padding: 0px 0px; /*Gör den lite högre så att man kan ha en bild där sen*/ 
 }
-.meny-wrapper h1{
-/*h1-taggar i denna ska vara centrerade..*/
-text-align:center;
+.meny-wrapper h1 { /*h1-taggar i denna ska vara centrerade..*/
+    text-align: center;
 }
+
+
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px){
+@media only screen and (min-width: 480px) {
+
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
-/*
+   /*
     nav a {
-        float:left;
-width:27%;
-margin:0 1.7%;
-padding:25px 2%;
-margin-bottom:0;
-}
-nav li:first-child a{
-margin-left:0;
-}
-nav li:last-child a{
-margin-right:0;
-}
-*/
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+ */
    /*^Kommenterar bort denna kod då vi vill att Paddor ska ha samma layout som mobil...*/   
 
 /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
 
-    nav ul li{
-display:inline;
-}
-.oldie nav a{
-margin:0 0.7%;
-}
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
+
 /* ====================
     WIDE: CSS3 Effects
    ==================== */
-.header-container,
+
+    .header-container,
     .main aside {
-        -webkit-box-shadow:0 23px 31px rgb(31, 0, 0);
--webkit-box-shadow:0 23px 31px rgb(31, 0, 0);
--moz-box-shadow:0 23px 31px rgb(31, 0, 0);
-box-shadow:0 23px 31px rgb(31, 0, 0);
-}
+        -webkit-box-shadow: 0 23px 31px rgb(31, 0, 0);
+           -moz-box-shadow: 0 23px 31px rgb(31, 0, 0);
+                box-shadow: 0 23px 31px rgb(31, 0, 0);        
+    }
+
 /* ============
     WIDE: Menu
    ============ */
 
-    .title{
-float:left;
-}
-nav{
-/* float: rig*/
-float:right;
-Float:right; /* fungerar ej då man ska ge menyn en höjd..*/     
-width: 100%;
-height:37px;
-background-color:black;
-margin-bottom: 10px;
-}
-nav li #submenu1{
-display:block;
--webkit-transition:height 0.5s ease-in-out;
--moz-transition:height 0.5s ease-in-out;
--o-transition:height 0.5s ease-in-out;
-transition:height 0.5s ease-in-out;
-height:auto;
-overflow:visible;
-}
-.navhide{
-/*Gömmer "visa navigation" när man har större skärm..*/
-display:none;
-}
-nav a{
-float:left;
-width:24%;
-margin-right:.5%;
-margin-left:.5%;
-/*jag använder margin här så att det blir en skildring mellan
+    .title {
+        float: left;
+    }
+
+    nav {
+       /* float: right; Float: right fungerar ej då man ska ge menyn en höjd..*/ 
+        width: 100%;
+        height: 37px;
+        background-color: black;
+    }
+    nav li #submenu1 {
+        display: block;
+        transition: height 0.5s ease-in-out;
+        height: auto;
+        overflow: visible;
+        }
+    .navhide { /*Gömmer "visa navigation" när man har större skärm..*/
+        display: none;
+
+    }
+    nav a {
+        float: left;
+        width: 24%;
+        margin-right: .5%;
+        margin-left: .5%; /*jag använder margin här så att det blir en skildring mellan
                             de olika meny alternativen. jag kunde använt border men border
                             jobbar inte med "%" så det blev problem då mellanrummen mellan
                             alla alternativ inte får överstiga 1%... genom att sätta 
                             background-color till svart på nav.. så ser det ut som om man använder
                             någon form av border...*/
-}
-nav li:hover #submenu1, nav a:focus + #submenu1, #submenu1.hovered{
-display:block;
-height:0;
--webkit-transition:height 0.5s ease-in-out;
--moz-transition:height 0.5s ease-in-out;
--o-transition:height 0.5s ease-in-out;
-transition:height 0.5s ease-in-out;
-}
-/*Fixar navigationen till sidan..*/
-    nav li #submenu1 li:hover #submenu2, nav li #submenu1 a:focus + #submenu2, #submenu2.hovered{
-display:block;
-height:auto;
-/*Genom att använda Auto så försvinner animationen, men det löser problemet med att andra saker måste ligga rätt..*/
--webkit-transition:height 0.5s ease-in-out;
--moz-transition:height 0.5s ease-in-out;
--o-transition:height 0.5s ease-in-out;
-transition:height 0.5s ease-in-out;
-width:50%;
-margin-left:13%;
-margin-top:35px;
-border-top:1px solid black;
--webkit-border-radius:0 0 10px 10px;
--moz-border-radius:0 0 10px 10px;
-border-radius:0 0 10px 10px;
-}
-#submenu2{
-background-color:black;
-}
-#submenu2 a{
-width:29%;
-margin-left:3%;
-height:35px;
-/*Vi gör height högre på submenyn så det blir lättare att navigera på den..*/
-padding-top:15px;
-}
-#where{
-top:-5px;
-background-color:rgba(105, 0, 0, 0.81);
-border:1px black solid;
-margin-left:auto;
-margin-right:auto;
-padding:4px;
-margin-top:-40px;
-text-align:center;
-}
+        
+        }
+    nav li:hover #submenu1, nav a:focus + #submenu1, #submenu1.hovered {
+        display: block;
+        height: 0;
+        transition: height 0.5s ease-in-out;
+        }
+    /*Fixar navigationen till sidan..*/
+    nav li #submenu1 li:hover #submenu2, nav li #submenu1 a:focus + #submenu2, #submenu2.hovered {
+        display: block;
+        height: auto; /*Genom att använda Auto så försvinner animationen, men det löser problemet med att andra saker måste ligga rätt..*/
+        transition: height 0.5s ease-in-out;
+        width: 50%;
+        margin-left: 13%;
+        margin-top: 35px;
+        border-top: 1px solid black;
+        border-radius: 0 0 10px 10px;
+        }
+    #submenu2 {
+        background-color: black;
+        }
+    #submenu2 a {
+        width: 29%;
+        margin-left: 3%;
+        height: 35px; /*Vi gör height högre på submenyn så det blir lättare att navigera på den..*/
+        padding-top: 15px;
+        }
+    #where {
+        top: -5px;
+        background-color: rgba(105, 0, 0, 0.81);
+        border: 1px black solid;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 4px;
+        margin-top: -40px;
+        text-align: center;
+        }
+
+    
+
 /* ============
     WIDE: Main
    ============ */
 
-    .main article{
-float:left;
-width:57%;
-}
-.main aside{
-float:right;
-width:28%;
-}
-.main-container, #content{
-background-image:url(../images/bakgrund.jpg);
-background-image:url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
-background-position-x:50%, 50%;
-background-repeat:no-repeat, repeat-y;
--webkit-background-size:194%, 194%;
--moz-background-size:194%, 194%;
--o-background-size:194%, 194%;
-background-size:194%, 194%;
-}
+    .main article {
+        float: left;
+        width: 57%;
+        }
+
+    .main aside {
+        float: right;
+        width: 28%;
+        }
+    
+    .main-container, #content {
+        background-image: url(../images/bakgrund.jpg);
+        background-image: url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
+        background-position-x: 50%, 50%;
+        background-repeat: no-repeat, repeat-y;
+        background-size: 194%, 194%;
+        }
+
+    
 }
 
 
-@media only screen and (min-width: 1140px){
+@media only screen and (min-width: 1140px) {
+
 /* ===============
     Maximal Width
    =============== */
-.wrapper {
-        width:1026px;
-/* 1140px - 10% for margins */
-margin:0 auto;
-}
-/*LOWE LÄGGER IN*/
-    .main-container, #content{
-background-image:url(../images/bakgrund.jpg);
-background-image:url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
-background-position-x:50%, 50%;
-background-repeat:no-repeat, repeat-y;
--webkit-background-size:2240px, 2240px;
--moz-background-size:2240px, 2240px;
--o-background-size:2240px, 2240px;
-background-size:2240px, 2240px;
-}
-article{
-padding-left:20px;
-}
-.bild1{
--webkit-background-size:1000px;
--moz-background-size:1000px;
--o-background-size:1000px;
-background-size:1000px;
-/*Gör att bilden stannar vid 1000px när skärmen är över 1140px..*/
-background-position:50%;
-}
-.meny-wrapper{
-margin:0 auto;
-padding:0px 0px;
-width:654px;
-}
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+    /*LOWE LÄGGER IN*/
+    .main-container, #content {
+        background-image: url(../images/bakgrund.jpg);
+        background-image: url(../images/bakgrund.jpg), url(../images/bakgrund2.jpg);
+        background-position-x: 50%, 50%;
+        background-repeat: no-repeat, repeat-y;
+        background-size: 2240px, 2240px;
+        }
+    article{
+        padding-left: 20px;
+        }
+    .bild1{
+        background-size: 1000px; /*Gör att bilden stannar vid 1000px när skärmen är över 1140px..*/
+        background-position: 50%;
+        }
+    .meny-wrapper {
+        margin: 0 auto;
+        padding: 0px 0px;
+        width: 654px;
+        }
 }
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 
-.ir{
-background-color:transparent;
-border:0;
-overflow:hidden;
-*text-indent:-9999px;
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
 }
-.ir:before{
-content:"";
-display:block;
-width:0;
-height:150%;
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
 }
-.hidden{
-display:none !important;
-visibility:hidden;
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
 }
-.visuallyhidden{
-border:0;
-clip:rect(0 0 0 0);
-height:1px;
-margin:-1px;
-overflow:hidden;
-padding:0;
-position:absolute;
-width:1px;
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
+
 .visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus{
-clip:auto;
-height:auto;
-margin:0;
-overflow:visible;
-position:static;
-width:auto;
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
 }
-.invisible{
-visibility:hidden;
+
+.invisible {
+    visibility: hidden;
 }
+
 .clearfix:before,
-.clearfix:after{
-content:" ";
-display:table;
+.clearfix:after {
+    content: " ";
+    display: table;
 }
-.clearfix:after{
-clear:both;
+
+.clearfix:after {
+    clear: both;
 }
-.clearfix{
-*zoom:1;
+
+.clearfix {
+    *zoom: 1;
 }
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
 
-@media print{
-* {
-        background:transparent !important;
-color:#000 !important;
-/* Black prints faster: h5bp.com/s */
--webkit-box-shadow:none !important;
--moz-box-shadow:none !important;
-box-shadow:none !important;
-text-shadow:none !important;
-}
-body{
-position:relative;
-}
-nav{
-display:none;
-}
-.footer-container{
-display:none;
-}
-#logga{
-display:none;
-}
-.title{
-display:block;
-color:black;
-}
-.meny-wrapper{
-margin:0 auto;
-padding:0px 0px;
-width:auto;
-}
-.meny-wrapper h1{
-text-align:left;
-border-bottom:2px black solid;
-}
-.meny-wrapper h1:before{
-content:"taget från ";
-/*Lägger till texten "taget från" framför titeln..*/
-font-size:0.5em;
-}
-.meny-wrapper h1:after{
-content:".se";
-}
-.main aside{
-border-top:0 solid #260101;
-margin-top:0;
-margin-bottom:5px;
-padding:0 0 10px;
-page-break-inside:avoid;
-/*Så att sidan inte splittas på två delar om möjligt..*/
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    body{
+        position: relative;
+    }
 
-}
-article{
-margin-top:5px;
-position:static;
-page-break-inside:avoid;
-/*Så att sidan inte splittas på två delar om möjligt..*/
-
-}
-.images a{
-border:1px black solid;
-/*ger en kant runt ramarna så att det ser bättre ut mot
+    nav {
+        display: none;
+    }
+    .footer-container {
+        display: none;
+    }
+    #logga{
+        display: none;
+    }
+    .title{
+        display: block;
+        color: black;
+    }
+    .meny-wrapper {
+        margin: 0 auto;
+        padding: 0px 0px;
+        width: auto;
+    }
+    .meny-wrapper h1 {
+        text-align: left;
+        border-bottom: 2px black solid;
+    }
+    .meny-wrapper h1:before{
+        content: "taget från "; /*Lägger till texten "taget från" framför titeln..*/
+        font-size: 0.5em;
+    }
+    .meny-wrapper h1:after{
+        content: ".se";
+    }
+    .main aside {
+        border-top: 0 solid #260101;
+        margin-top: 0;
+        margin-bottom: 5px;
+        padding: 0 0 10px;
+        page-break-inside: avoid; /*Så att sidan inte splittas på två delar om möjligt..*/
+    }
+    article{
+        margin-top: 5px;
+        position: static;
+        page-break-inside: avoid; /*Så att sidan inte splittas på två delar om möjligt..*/
+    }
+    .images a{
+        border: 1px black solid; /*ger en kant runt ramarna så att det ser bättre ut mot
                                     den vita bakgrunden..*/
-page-break-inside:avoid;
-/*vill inte att bilderna ska kunna bli halva..*/
-}
-a,
-    a:visited{
-text-decoration:underline;
-}
-a[href]:after{
-content:" (" attr(href) ")";
-}
-abbr[title]:after{
-content:" (" attr(title) ")";
-}
-/*
+        page-break-inside: avoid; /*vill inte att bilderna ska kunna bli halva..*/                            
+    }
+    
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
      * Don't show links for images, or javascript/internal links
      */
 
     .ir a:after,
     a[href^="javascript:"]:after,
-    a[href^="#"]:after{
-content:"";
-}
-pre,
-    blockquote{
-border:1px solid #999;
-page-break-inside:avoid;
-}
-thead{
-display:table-header-group;
-/* h5bp.com/t */
+    a[href^="#"]:after {
+        content: "";
+    }
 
-}
-tr,
-    img{
-page-break-inside:avoid;
-}
-img{
-max-width:100% !important;
-}
-@page{
-margin: 0.5cm;
-}
-p,
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
     h2,
-    h3{
-orphans:3;
-widows:3;
-}
-h2,
-    h3{
-page-break-after:avoid;
-}
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
