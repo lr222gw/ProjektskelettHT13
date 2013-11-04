@@ -90,6 +90,10 @@ html, body{
             samma egenskaper som main-content hade.. main-content kommer inte längre styra över bakgrunderna..
             Problem som medförs med detta är footern, den måste nu ligga i botten av sidan och vara absolut.*/
 height: 100%;
+position: relative;
+height: auto !important; /**/
+height: 100%;
+min-height: 100%;
 }
 
 .wrapper {
@@ -127,7 +131,10 @@ aside {
     background: #730202;
     width: 100%;
     z-index: 5;
-    bottom: 0;
+    bottom: -100px; /*sätter denna till negativ så att man får lite plats till innehållet i main-content.. (så att det
+                    inte ligger på footern...).
+                    OBS dåligt med denna lösning, alla sidor behöver man skrolla ner på för att se footern.. även om det
+                    ej skulle behövas..*/
     }
 .header-container{
     background: rgb(0, 0, 0);
