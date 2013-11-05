@@ -271,6 +271,7 @@ textarea{
     width: 77%;
     max-width: 400px;
     -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     }
 
 .images {
@@ -281,6 +282,7 @@ textarea{
 .images a:hover{
     zoom: 1.2;
     -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .images a:after {
     content: attr(title);
@@ -381,6 +383,7 @@ nav li:hover #submenu1, nav a:focus +  #submenu1, #submenu1.hovered { /*Gör så
  
 nav li:hover #fprint, nav a:focus #fprint { /*ändrar hur fingreprinten är roterad.*/
     -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
     }
 nav ul li a {
     box-shadow: inset 0px 14px 138px -27px rgba(0, 0, 0, 0.81); /*Denna gör navigation lite mörkare, den under gör sp att de ärvande menyerna inte påverkas.*/
@@ -393,6 +396,7 @@ nav ul li ul li a {
     background-position: 50% -2px;
     background-repeat: no-repeat;
     -webkit-transform: rotate(27deg);
+    transform: rotate(27deg);
     height: 31px;
     position: relative;
     z-index: 40;
@@ -414,10 +418,12 @@ nav ul li ul li a {
     left: 90%;
     margin-bottom: -22px;
     -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
     transition: 0.4s ease-in-out;
     }
 nav li #submenu1 li:hover #arrow, nav li #submenu1 a:focus #arrow, nav li #submenu1 a #submenu2.hovered + #arrow  {
     -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
     transition: 0.4s ease-in-out;
     } /*Gör så att pilen ändrar sig när man hovrar/har fokus på den..*/
 
